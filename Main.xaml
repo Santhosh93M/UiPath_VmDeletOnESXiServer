@@ -1,0 +1,487 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.vmName="rpaTestUbuntu" this:Main.userName="san" this:Main.email="santhosh936m@gmail.com" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="vmName" Type="InArgument(x:String)" />
+    <x:Property Name="userName" Type="InArgument(x:String)" />
+    <x:Property Name="email" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>734,4917</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>deleteVmProcess.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="744,4852" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Log in - VMware ESXi" sap:VirtualizedContainerService.HintSize="682,4741" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="65e1540a-8693-4529-8deb-dcd38841c135" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,4524" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="vmDetails">
+                <Variable.Default>
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new System.Data.DataTable();</CSharpValue>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="status" />
+              <Variable x:TypeArguments="x:String" Default="root" Name="useraddress" />
+              <Variable x:TypeArguments="x:String" Default="Master@1234" Name="userpass" />
+              <Variable x:TypeArguments="x:String" Name="result" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="586,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Timeout="100" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/login" CvElementArea="167, 489, 205, 27" CvType="InputBox" DesignTimeRectangle="169, 491, 200, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='margeTextInput ng-pristine ng-valid ng-empty ng-touched' aaname='' /&gt;" Guid="48e74925-6bd0-45b5-9a29-5c48de628621" InformativeScreenshot="7b5360964283e36e8d2878c426d52666.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="167, 489, 205, 27" CvTextArea="50, 492, 64, 12" CvTextArgument="User name" CvType="InputBox" DesignTimeRectangle="52, 491, 361, 17" ElementType="Text" FriendlyName="'User name'" FullSelectorArgument="&lt;webctrl id='username-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username-label' tag='LABEL' type='' class='loginLabel' aaname='User name                             ' check:innerText='User name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAW0AAAAVCAYAAACNB786AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPSSURBVHhe7ZgxaxVBEMcffrTgx8iLX8DOxtrGkKjVKxJIa8C8Jo3apHiNWAVBTaOIBJJCCSIGlKBw7n93Z3d27xavOLl7y/8P8+ZmZvd2D7I/Jjub3XnS0Gg0Gm2aduv23WZ2/zDmdJFWkb1paDTav6zr7EzMHLSfxtxs67F5MAYvxnj9Y/MHuVgsaDRawSy0S+dnQnHotCUXiW6C8Mx47WMPbYqi2grQLp2fCcXt6xFFdFpFRmhTVFFJpz1xa3fa+DH0nu+/bH78umnOLq4czU0+5C5Nzo7zk3yd8YRjQpuiikqgPcR5+49xvNP29dnWI/sw338RoY2CyScg9+Po18QT2hRVVIR2z/M0ok87bZN3D6qrDtDuzuFZdPHtutnYXiZjRQerdzb/4Ph1c/P7T/Pp63fr9RxdP/38JczX60lddHJ2bvN4P/Tqw2WoY57sDznMlfdgnijfQ5VGaFNUUUmnPXHruB4B0U1Xvac7bZObo9NWORMfrN7aD4YXmAKGG9tHFoQOhkc2J9CUcVKT9fA++Lyu58p7sR7GYx9Sk73IfgXWmC/7lnfqfaf/Ufi9qP1UExPaFFVU2mkbG/r8DRhHaPuc0LvP9Yh0t5AFqZ8r4AUwdYzxeS0aNhDHyrqyRtf7IXjEEcSuo09hv7TAdtBe2nfjO/A9GItYarKG7KeamNCmqKLanfbA52/AONxpS80S3VjSaRdyGw9d56sFeApAc528P4/QNs/yXm15PcLYdMV+fYExxrSh7bpwXZN9wu4drlp7hizEzfv1XqoyQpuiigrQ7jo7E7PQaUvO/hiqC+hcx+uK+fWI5OEBSQj149OPDrzoprNxCZRVvlTXMG6BWXXTSc3MS6Dtr1Vg+C7s30LafE++frWe0KaoohJo9zlPI/rkegR5+2Nt18JNwIc4heZu1s0+C2CUblYgqcfB8GyhHNZy68Hndb2mrs33niddd7q3cqeNZz226z8KZ24/1cSENkUV1e60Bz5/A8bFThteOlQtC1NFfsBOJJBEXmAoEpgmUFbvsb6jnsNYr3d1/dN61JJxZl4C7azTlroo5P0eWvsSv851QpuiiurVaYuNXI932j7niG5s03vGdcSENkUVFaHtz8vQ52/AOHbaPuceQHD6qjyhTVFFpdDucZ5G9On1iMkHotPX5QltiioqQLvveRrRJ5028vaBVp8R2hRVVNppT9vCnbbkZps7jt70dXlCm6KKip12z/M0og+dtuTtA+jd5cVYX786oU1RRUVoZ+dGe7GR6+3rEUt0WnVGaFNUUWmnPW2LnTbineYvwzLFOgrkVBQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">useraddress</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="586,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/login" CvElementArea="168, 526, 202, 26" CvType="InputBox" DesignTimeRectangle="169, 528, 200, 23" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='margeTextInput ng-pristine ng-untouched ng-valid ng-empty' aaname='' /&gt;" Guid="c2ee5738-1148-43f8-be9c-c5832fd4ba71" InformativeScreenshot="f6c08ac7781b339e6d65f7163182f740.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="168, 526, 202, 26" CvTextArea="51, 528, 58, 13" CvTextArgument="Password" CvType="InputBox" DesignTimeRectangle="52, 528, 361, 17" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl id='password-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password-label' tag='LABEL' type='' class='loginLabel' aaname='Password                             ' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAW0AAAAVCAYAAACNB786AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVHhe7ZrPahRBEMYXHy34DCYG9g18AM9rNvEBNjnlGm8R/1xFDwneBEE8qgcDIkGEHCJBYeyvur/pntkS5zazne+DSnVXV3XPgP1LOTqb7T5uZDKZTDZNu3P3QTN7eJJjs/sHjUwmk8mmaRHaT3LMfuymiXxVfrVayWSyf9jQezS2b6HNuP0w209e81rm+IMpSdK6DNq9+zLVud9py6o0QVuSfK1De7rWftNmbLYDou8388MXzdWvm/RKWa8+fLF15m2Snx+Fd7q+aT5eXA7Kr80L2pLkK0LbvzdT87nTTnEbBHob4AK0DXBG9H0b3/z+0yyenseCFN8UPz96WbzT8LpavKAtSb5ypz38Po3lu59HQpxEt04bXenXBLgQX5yeG7St2w5zeMpgHtZZjzrq4sdVs/UotPPFHtTx6/fN1t6J5TAPvxSQ05/zXECXspxQjzj2griOZyjPQ26n06al96t9LmhLki+Ddu++THXeQpsxSwjW7bRjrIQnxpdX15bHXAL0+E2EJ3xZ04FzGGNv1KEe68hDPuu5hjnXyhqey2dkHec8r9ynXL9tJmhLkq/Yafv3ZmqWv2mn2GxnafSeHz7PnbYRfWljg6d11DGv7LYNxqEzZscLYcx6rCEHYi73WZye2d7IL/fEHOci/+DZ2+KZ8vnxmc7ac+OZy7bLRg7mnb89pPrb5AVtSfKVO+3h92ks3+20QzwO8ueRvghhAhIwRS48QVzCmerXUazheZ++/7QY/bvP31rQdiEcnzNDO3ToaW+e1c/vQjvW3yYTtCXJV4b29G3984gRHV1p2WnHWGmIYx15hDQBXOYBmBBzGef+EDth7gnQAryYU5h7z5Sh7XXasXtn/v/eqXYTtCXJV4S2f2+mZhnaKRYH/ueR0nuwJLTz2nkH6P3PG33Ict7fFzUR+PEfODnvf+7o78ezmc/1DO3196rZC9qS5Ct32sPv01i+/abN+Gwbi6ErXfW6UsRpxToEyGJscAxxrKOOIoRRy+6XKvfnngb/xUmbyznPL/cu6zvQTrnlcxLgVpPWzZz3q3EuaEuSL4N2775Mdd522oxZgqxKE7QlyVfstP17MzVb/zyyvZcILl+bF7QlyVfutIffp7F8t9MOcRuA3vLVeUFbkny1nfaAezS2z9+0UzwSXVajCdqS5Ct22v69mZrlTjvFykVZXSZoS5KvzYb2vTSQr84L2pLkq4X2gHs0tu9AG3EbyKo0QVuSfG1ep43/Ao35XvMX2pNHGafGDhsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">userpass</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/login" CvElementArea="274, 582, 96, 25" CvTextArea="305, 587, 35, 14" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="274, 582, 97, 24" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl id='submit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='submit' tag='INPUT' type='submit' class='button blue' aaname='Log in' check:text='Log in' /&gt;" Guid="c8fc1b50-7682-40a2-829b-d7945d74234f" InformativeScreenshot="f3b7f963531e71f4496d75b35596a735.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - VMware ESXi' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Virtual Machines'" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host" CvTextArea="59, 276, 98, 12" CvTextArgument="Virtual Machines" CvType="Text" DesignTimeRectangle="61, 273, 145, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Virtual Machines'" FullSelectorArgument="&lt;webctrl aaname='Virtual Machines' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Virtual Machines' tag='SPAN' type='' class='object-navigator-label short-label bold' check:innerText='Virtual Machines' /&gt;" Guid="ac016407-d019-46cd-8737-83352d23eb01" InformativeScreenshot="8319e557a451a95b5d8b76990f970e06.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="39, 273, 19, 18" CvType="Icon" DesignTimeRectangle="41, 275, 16, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl class='icon-vms' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='icon-vms' tag='SPAN' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJvSURBVDhP1ZO7T1NhGIeZSNiMTiS6O5iYOLq4GI2pJybwPxAlcXFxQRcTJyYDlcSYIAWsYFtKQVBBvICkkAhe0oBSeqOFlsIBW1pavtPHt62SFmknBh1+ec/5cr7n995OTSS6yVHqPwOG1orx7rsk2mCKa64UWokK784ULs824ZLvS1UGDKwW44X+JGZvjtE4OKMwsg7DMXAnoXlG0TG5vX/noP4C5p01xxZD0RwLCuZ34c0WDAl0dgeuu/d4+HoTr19n0avj/53EHx1a8lV7HOuKgQ+48w1qeg0ujsO5UXkeUNQ6FOdfGRxzKRpd6f37eZUBl8J6wfmyJc59j2JMMrsyoWh2GwRzsCYGbzcUE3GFJMuMtMDkTFYGNsgg6pySQV+WepdRzMiuOOE0qOlStC5K+QJ7GtjDa8CLWA5tYKsy0ORIIP3m2XKKKV3hy+VwRhSTukHLvOKmDMQVzmBZzhb661oToG2jMlCz6zhWoS+QofXrDuaFFPfmUrR5ZF1eJrk0kqTDs4M9rJhLgy1soPXFqgBtcXpCBnMZmJYmzWehy69k4ga3P2Vomtrli5yNyDpNSH+7AwrNGqkC7I/S6VO8l7JHN2QAP8H8I4stYnDLnebGdJrP0rsxOf8o6/RcpmTqDVUBilv70l4BZpeFHpbY/j1Dy2wC05BO7YMAZ60hTlpCnO5doa4zSGO3rzLQ1BPkkT/HeEImqAtQyhrMZyrlN31I0DYclLWKsbgUK0Svfx1/pMpQGiw+6h4HONW9Qn1XqKDjojNWyca8zJPp8n4dpjJg3i3vWnQ/qHWC8ieFD6j0fl5lwKPQvw7c5Bfn+o2RnfCNyQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='false' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Column-0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='vmName'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1 Url' ReferenceIdx='2' Name='vmUrl'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='powerStatus'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-3' ReferenceIdx='4' Name='Column-3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-4' ReferenceIdx='5' Name='Column-4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-5' ReferenceIdx='6' Name='OS'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-6' ReferenceIdx='7' Name='Column-6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-6 Url' ReferenceIdx='8' Name='vmUrlRemote'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-7' ReferenceIdx='9' Name='Column-7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-8' ReferenceIdx='10' Name='Column-8'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-9' ReferenceIdx='11' Name='Column-9'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-10' ReferenceIdx='12' Name='datastore'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-11' ReferenceIdx='13' Name='Column-11'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-11 Url' ReferenceIdx='14' Name='Column-11 Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-12' ReferenceIdx='15' Name='Column-12'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-13' ReferenceIdx='16' Name='Column-13'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-14' ReferenceIdx='17' Name='Column-14'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-15' ReferenceIdx='18' Name='Column-15'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-16' ReferenceIdx='19' Name='Column-16'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-17' ReferenceIdx='20' Name='Column-17'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' /&gt;&lt;column name='Column-1' attr='fulltext' name2='Column-1 Url' attr2='href' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;column name='Column-3' attr='fulltext' /&gt;&lt;column name='Column-4' attr='fulltext' /&gt;&lt;column name='Column-5' attr='fulltext' /&gt;&lt;column name='Column-6' attr='fulltext' name2='Column-6 Url' attr2='href' /&gt;&lt;column name='Column-7' attr='fulltext' /&gt;&lt;column name='Column-8' attr='fulltext' /&gt;&lt;column name='Column-9' attr='fulltext' /&gt;&lt;column name='Column-10' attr='fulltext' /&gt;&lt;column name='Column-11' attr='fulltext' name2='Column-11 Url' attr2='href' /&gt;&lt;column name='Column-12' attr='fulltext' /&gt;&lt;column name='Column-13' attr='fulltext' /&gt;&lt;column name='Column-14' attr='fulltext' /&gt;&lt;column name='Column-15' attr='fulltext' /&gt;&lt;column name='Column-16' attr='fulltext' /&gt;&lt;column name='Column-17' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+              <uix:NExtractData.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">vmDetails</CSharpReference>
+                </InOutArgument>
+              </uix:NExtractData.DataTable>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="267, 270, 1072, 175" DesignTimeScaleFactor="1" FriendlyName="'argodemoPowered onNorma…'" FullSelectorArgument="&lt;webctrl class='k-selectable' tag='TABLE' /&gt;" Guid="aec19fd3-0879-4725-8a61-9fe159917657" InformativeScreenshot="5ade20a9b00fd99c7438b8925892c173.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="586,2434" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="vm" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,2248" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If sap:VirtualizedContainerService.HintSize="510,2160" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">vm["vmName"].ToString() ==vmName</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,1978" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Ready to Delete" />
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V3">
+                            <uix:NGoToUrl.Url>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">vm["vmUrl"].ToString()</CSharpValue>
+                              </InArgument>
+                            </uix:NGoToUrl.Url>
+                          </uix:NGoToUrl>
+                          <If sap:VirtualizedContainerService.HintSize="434,1110" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">vm["powerStatus"].ToString()=="Powered on"</CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,928" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/60" CvTextArea="937, 205, 42, 12" CvTextArgument="Actions" CvType="Text" DesignTimeRectangle="939, 205, 39, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Actions'" FullSelectorArgument="&lt;webctrl class='vui-action-label' parentid='actionsButton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='vui-action-label' parentid='actionsButton' tag='SPAN' type='' aaname='Actions' check:innerText='Actions' /&gt;" Guid="cba0c998-22f0-4e00-b996-7d3d43e82b6d" InformativeScreenshot="ff12186ed81e5be2e83ef437f4b42666.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CvElementArea="915, 200, 22, 22" CvType="Icon" DesignTimeRectangle="919, 204, 16, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='actionsButton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='actionsButton' tag='SPAN' type='' class='vui-icon-placeholder esx-icon-actions' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVDhPvVRNbxJRFPWvMQNt+QWyUxemSV0abTQa22hiaxmMFAZkZtKNnQoztAujrQtNF0Y39oMtCSxZUv4AHO+5Mh0+KmjSeJKbvLn33PPeve++uYFrxv8X7HQ6yKxuI/NwW9fzMCXY7/fR7V5gMBjod61Wg2k1kBQLgkB9jJFD7iTGBEm4//QlltY/I1d0ENYPkL63iaTdVuO6vn8Aq+AI5wgPhDspOibIXSlmFlowcucwcydIvW3HVm7DsH7+jglnce1Ic0YxJshSeLKEJCQleaHcxK3iVzwuhnhkh7qmjzFyXgs3ak2EqR7WghAJ60SSmniS82DbNiqVihrX9KUkRk5Q3x9mxbgU5A2y6dozOcEd+xgVx0Gv1xsyoGsK3y4dK4dc5oze/qXgTRkLM9uAIc1nr9a9D3BEcBL0MUYOL4o5mdXCMDopuNWAabd09xc7H+G67jAag77nO5+Uo4KSc6VgVPISSy61cbfyDbu+P1UyfYyRM7PkCO/8PRmNM6RKTWw4NVSrVXiep8Y1fYwZ1in8veowK8aYIEfgTcmDkT3Tcpi47P7Alv9Fbdn9rj5TYgnZNF/2Zo8Nh3Rh7RBmvoVE9lRPakppLC8ynowbkrP47HD2YPMZ8TmRmJeT7vrvkV7ZhFmUlyOWXtnQMnkycuY+PYKE7kX8c2DT9fZfnSMMQ/Ux9lc/h6vAG+Svi6Mxept/wlzBf8U1CwK/AODtcE+FNbIVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NHover DisplayName="Hover 'Power'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NHover_1" InteractionMode="DebuggerApi" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                                  <uix:NHover.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/60" CvTextArea="946, 233, 36, 12" CvTextArgument="Power" CvType="Text" DesignTimeRectangle="947, 233, 34, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Power'" FullSelectorArgument="&lt;webctrl aaname='Power' parentid='power' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Power' parentid='power' tag='SPAN' type='' class='' check:innerText='Power' /&gt;" Guid="c9cb6c6b-e434-4200-80ec-36842449da21" InformativeScreenshot="85c71e00db19337e5982d47eb7248d24.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CvElementArea="922, 231, 21, 20" CvType="Icon" DesignTimeRectangle="924, 233, 16, 17" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='power' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='power' tag='SPAN' type='' class='esx-icon-vm-powered-on' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG+SURBVDhP5dLNKwRhHAfw50/wJ7g6uHNxd9iTUlpJkbcUDixtXlpKm6KEOBC7mYO2xa62dtNsSZKXxB52ilCSzduutdg1+HqemdmZHo3JwUW+9a2ZaX6fnmfmIfjl/FGQDBxb1irmYO8+juQXHMhp7Mp32JZv9JJhUXvLPOagcxMbr7eIyGdYkWNYetvVSybntbfMYw461hHInsOTo4AwB+IfN69vVJswYg52BjGbljCSEUFWRzH4MQ1iL9DL7pVnIac2YYQDSX9M/fDuPbq1MIjXA7IyBhJ2KVAQi0rZdd87Bde6tUkjPOg8gCQDTfEEIu8SBIgoufLCBXWFDLOnauB+HFRXu9ylTRrhQccODnNAY/wK9uNDlF+EKehB0fWEAsy/TcKWqFKaR7+GB9u3sPMERJ+T8GclzOTUFfaw7dFhhpSeVug1Q3mwNYroA7CWTkLISBh/FlF2uYCOrAEWHtm4WoMNEYTuAV8qqf9lBhYn6BGhg82XbZYYCw/WhuBLAN6bFCbuJLiSIjrSAuoy6gorT+otMRYerA6obRToD5qix2cIZLqTHp8WDvwOY+FAqzAkX6v8GPxp/h0IfAIj+bSfUEGC8AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NHover.Target>
+                                </uix:NHover>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Power off'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/60" DesignTimeRectangle="733, 260, 50, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Power off'" FullSelectorArgument="&lt;webctrl aaname='Power off' parentid='powerOff' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Power off' parentid='powerOff' tag='SPAN' type='' class='' check:innerText='Power off' /&gt;" Guid="3228943e-6745-4f0b-922a-538be0daf436" InformativeScreenshot="dcd8847e05976838836971b2139093b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="710, 261, 16, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='powerOff' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='powerOff' tag='SPAN' type='' class='esx-icon-vm-power-off-warn' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVDhPYwiun/+fmnjUQMox/Qy8wMT0/6qIME68VUAEqz6cBoI0/Z/a//9/UzVWnEOygcJAA2tK/v/3dsDAl4K8/yfZOfwPz67+H1I1FUUfbgMFBf7/z07+/99CFwNXhAb/f9XH/X9rjdb/sKI2FH24DeTj+/8/0Ov/f0l+DJwfFPj//zSG/wcblP6HFbai6MNtIBfX///GBv//MzBg4Hx/fzIMZGH+/19UkIoGgjQzMlLPQFA6AyUNbDjN2Ph/b5bj/8rMkP+hZX0o+nAaiA9HxQNjn1QX4sMR6UX/ZxRY/G/M8fkfWtqDIkeWgSG1s4EJetr/kOoZ/4Pr5qLIkWUgPkxlA+f/BwDlBLckD2pNAAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/60" CvElementArea="809, 485, 72, 25" CvTextArea="834, 490, 22, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="811, 486, 70, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='' aaname='Yes' check:innerText='Yes' /&gt;" Guid="2299428b-bc2f-441f-a594-d8c06c181ab7" InformativeScreenshot="2e506211df2001ef3fd6362ccc554681.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Delay>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
+                            </If.Else>
+                          </If>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/53" CvTextArea="937, 205, 42, 12" CvTextArgument="Actions" CvType="Text" DesignTimeRectangle="939, 205, 39, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Actions'" FullSelectorArgument="&lt;webctrl class='vui-action-label' parentid='actionsButton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='vui-action-label' parentid='actionsButton' tag='SPAN' type='' aaname='Actions' check:innerText='Actions' /&gt;" Guid="57f4dc57-c42b-4844-a35d-9c74f673d10a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAASCAYAAADCKCelAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVEhL7ZRZDoQgDIbnTpxLrkK8CZ7EeAwT79ChC0JZxvGBBxP/xAxIab8uzgcepBd2lJ4Oe4CfDJh5k/2Fdg/WOCDrfD1ANezqAqgD92/QwYC5KthtNuBW/rXLIW9FBBaqjs/kQw+2kJTsEbgEx8SVPYo750JBzrOsixi39R5VwGJwCYaBzwAoPLPgd9nFZHLAas2J69GSdfRNCYlfXKukUjyUhqURiNkUxspRph5saU9QeMawqWtZEXoxRApWtUCe6PRY7C3Yyv48Y1iuOEp3jO4VsaMSLDnTZf9ZqagO7FVle7BJpV0G264cOpILRTLUBRyZHiyt+zPbgiWG3hgGCSw7qL7+IIKKSVB1uEUpMU7o9r9Bs7KSlNzpj8ED9MKO0gs7RgBfWqEYqhZnP+UAAAAASUVORK5CYII=" InformativeScreenshot="ff12186ed81e5be2e83ef437f4b42666.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvElementArea="915, 200, 22, 22" CvType="Icon" DesignTimeRectangle="919, 204, 16, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='actionsButton' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='actionsButton' tag='SPAN' type='' class='vui-icon-placeholder esx-icon-actions' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVDhPvVRNbxJRFPWvMQNt+QWyUxemSV0abTQa22hiaxmMFAZkZtKNnQoztAujrQtNF0Y39oMtCSxZUv4AHO+5Mh0+KmjSeJKbvLn33PPeve++uYFrxv8X7HQ6yKxuI/NwW9fzMCXY7/fR7V5gMBjod61Wg2k1kBQLgkB9jJFD7iTGBEm4//QlltY/I1d0ENYPkL63iaTdVuO6vn8Aq+AI5wgPhDspOibIXSlmFlowcucwcydIvW3HVm7DsH7+jglnce1Ic0YxJshSeLKEJCQleaHcxK3iVzwuhnhkh7qmjzFyXgs3ak2EqR7WghAJ60SSmniS82DbNiqVihrX9KUkRk5Q3x9mxbgU5A2y6dozOcEd+xgVx0Gv1xsyoGsK3y4dK4dc5oze/qXgTRkLM9uAIc1nr9a9D3BEcBL0MUYOL4o5mdXCMDopuNWAabd09xc7H+G67jAag77nO5+Uo4KSc6VgVPISSy61cbfyDbu+P1UyfYyRM7PkCO/8PRmNM6RKTWw4NVSrVXiep8Y1fYwZ1in8veowK8aYIEfgTcmDkT3Tcpi47P7Alv9Fbdn9rj5TYgnZNF/2Zo8Nh3Rh7RBmvoVE9lRPakppLC8ynowbkrP47HD2YPMZ8TmRmJeT7vrvkV7ZhFmUlyOWXtnQMnkycuY+PYKE7kX8c2DT9fZfnSMMQ/Ux9lc/h6vAG+Svi6Mxept/wlzBf8U1CwK/AODtcE+FNbIVAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/53" CvTextArea="946, 632, 37, 12" CvTextArgument="Delete" CvType="Text" DesignTimeRectangle="947, 632, 35, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' parentid='deleteVM' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' parentid='deleteVM' tag='SPAN' type='' class='' check:innerText='Delete' /&gt;" Guid="87addd73-d993-4f7b-8002-91d273ffc551" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAASCAYAAADYFMcrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEHSURBVEhL7ZPRDYMwDESzEVvACmzAHszCKAzBAHzCL7+uDvXQYUjS8lMqcVJEQg772QnBbqwH7qr+A26aJquqykIIu9H3/dsR17Is1jRN1jsMg9V1veb6RAc4TYBgRVFkk/4EDuq6bk0MAAj77CrfezgWBQ9iIjbj67sznyoLp9ViXpbl+iRQ27Y7OB8H+yxCY6V81FdwZ13Eep7nDQ5Du+CL4zzlo7JwGgRwPFIO7I3juIPzHhwdknu4mI/66s5hjvZ76bFi0O/l4WI+KgmHYPq3Ys07B/Ge6LH6OCiInVe4lI86wPlWKyyENfcYTDsHsSh49KiYg9/FfNQGd0c9cFf1wF2T2Qv6Oczr9a+LygAAAABJRU5ErkJggg==" InformativeScreenshot="b550dc52ec56c58759afd1349b8b987c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target CvElementArea="922, 630, 21, 21" CvType="Icon" DesignTimeRectangle="924, 632, 16, 16" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='deleteVM' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='deleteVM' tag='SPAN' type='' class='esx-icon-vm-remove' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVDhP1ZG7SgNBFIbXRsHCF/BdLPQ1RK0sJKCdERFtBDut7SUSYqMQwWYFQcKCiKxuvBUWErysAQkJBJHf+ce9zXocIqTxh48DO8x35uxx0Of8U6GzdmfFFlm4fI7rD4jwzBZZuOjhogsRntkiCxdOUetAI42csOpHN9LIwoKLahMaXsyOPL7XsI5vCNnxxyti1BlHptA2vimMljF/2dH1Rn0rBF1dt70Qtfa3kJXw1+RjCqNlUEgom/PbcKen8DbooBS0MFFp4Pgdmo2De/19ayDVmELV0VOds1D68gl9kawfPqD8DATqLC9jTKFahqs6Z+FLWYu79UTqt2QZYwpnj5LtxsTjj22e4eS2mUgpW9q5im6mMYUzVVSeIFIsBXgdSWWsUkzh5L7ISrmOcCiVMb9J5Ta5PI6asjiStCdhOCwvgMlLexL+JX0WAl875YCNANIrHwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="65e1540a-8693-4529-8deb-dcd38841c135" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://172.30.44.85/ui/#/host/vms/53" CvElementArea="771, 493, 72, 25" CvTextArea="790, 498, 36, 12" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="773, 494, 70, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='BUTTON' type='button' class='' check:innerText='Delete' /&gt;" Guid="bfac4d5d-ae93-4e57-8ef5-2e696499a169" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAbCAYAAADbAhkjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVGhD7ZjLbtpAFIb7Tn4q27xHiEl3LHgBhDFVpUosWVUIExKpyyoKwXZQxR1xFVdxOmewYYw9kDLtpszi03jO/GfMfBgh+dOPnw5ILiNFfZCQqK/fipDJZCCdTt806ABdsG4OonChVCrBfD6H3W5306ADdMHKOohCi7PZDLbbrYSALtBJRBQ+cpvNJh7SGFsP+E/X0UmsqPV6LWHgilqtVhIGrqjFYkFZLpeH6z+eewVIKAooIRJQ8Dh5dk57U/B84X7PnxVIfPnFXf9b84uihKCHDYtZPKYismLxRT3FrTE8nYj6V3BF4d+iMK4FuqKD5YbrtQfyZD3U/HkTLP34xBm2n6O9BtSCPts4ZBTdgiapNQv6oaYXmtzc/j5inBWFf4tCo5OnovLOSR0PQw7xTuZ7aY/HepBnRIX3aUJew54a3Q/79cJ7zP3CudD9rxi5oqbTqTgNk35ws3FSrxAhmgnetAoG+eaNSrDmgUkOR+e014AqqXsWeXJo/rR/CtUUEWV5tH4ut9//eriiJpOJOG8maIoG5lu47uY1egB3YsN98DNh0PKu33sPdpCP5PZrNhFF8xdy7P2vgStqPB6LU89RUbl6uG4b5ACGTa5RVHSdQnvJIcm1gwJoPprDvbS8Q6/P5UThihqNRuK8+qJemVo5Sb7lY61CpVWYvALJcnCdhErMPrRHzUHDv9bMBtMfn6PrAnBFDYdDcV6yoEZ+CipkX9hcHbLqcV3N1ZneOygHue93zB7Hej2nhvs4OVHOihoMBnL0R66ofr8vYTgrqtfrydEfuaK63a6EgSuq0+lIGGJF4ds8z/Og1WpBu92++dF13fg3nPh+uFgs0gCGbxl0gC5i35kHstAiPnK3DDpgJSEhURI+UtSHcOA3SkG9N3Ce0VcAAAAASUVORK5CYII=" InformativeScreenshot="56fe1e5c1107387b21255ff44f0725c0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='localhost.localdomain - VMware ESXi' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NClick>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="VM Deleted SuccessFully..!" />
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">
+                                <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">status</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <ui:ForEachRow.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">vmDetails</CSharpValue>
+                </InArgument>
+              </ui:ForEachRow.DataTable>
+            </ui:ForEachRow>
+            <If sap:VirtualizedContainerService.HintSize="586,522" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">!status</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">result</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">$"The given {vmName}-VM didn't found in server\nRaise A ticket With Correct Details.Thanks\n\nRegards,\nAutomatedBot"</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">result</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">$"The given {vmName}-VM Got Deleted Permenantly from our Server!\n\nRegards,\nAutomatedBot"</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="logout.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="586,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="logout.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="sendMailToUser.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="586,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="sendMailToUser.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="email">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">email</CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="result">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">result</CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="user_name">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">userName</CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA1MSURBVGhDxZkLWFVVFsdv6ZSjlvgoLEV5vy9vREVBRAEVgWbKtFTwFb7J1DLNsBQfPAQRJcVn6lSTho/GGl/0KT4zsWkqMxVT0ErlCuoo3utZs9Z+nHvu7UDWODP7+/7ff621z+X81t77nAtqeBDjsaZNHAa3b5M219Mpf63RrfR494DKMz2DTD/1DoOfeofDmahg0+fd/CtLQ7zK5no45cc/4ZDSsdkjzuLj/59B0OlOjhmlQZ5lEpS7Jo6ROdePMaFCGPcKUfaEeVcMcmyb+j9thsCnOz+d+X3PwJqfYkIVBoYwNk7gBClAZU3mPA6Fy9HByo+9sCFUgVfntf/1RqY7P4Xg8mhwCBUMxWrRBMhX+jLGDJJiAcrjEJZzyZg8BKZ1bp8pbvfgBq3M3jC/CrZ6bAUJxtZVULGqEkiCq3m0rIfApaggbBCdKZjl5Ecj/Cof2G4McmyXerpHoMm6kiEcSAXVwgpJqKhgRQup1nsSKMUIzcCtqmZzwfBNd6Mprm2rFIHx+wZtp4SVYHI1CY47ApILQAYpVpI7ByWwaoJkcSA2hi6ho4JYzCVj9J5B8IqT4+87UlM7tc/Urq4VRhMTALpcNRYLEDYnYm2tukcgNoJw5AhIXiVi8qpITcwdm3jytzVBrza5zY1uu3AOyFeMxQQknWoSSNQZmKwjMEFaxaGlLpK6ByiDHFunCrzGBz0833Yz1jBA2na8Kdt2yjVSV1E43ozHBIYuIasiA/hKkhOUdDsxULuYKZLrqwjfmo6P/uHXH+yjEb6VNqtIQBQLIK2zWAJqpa6ifS4AuxsVFZBiAXmhG8UBGHNp8wvd/JWdgR4VAlN/0AOjriJJA24LaIVh0llVgpPOAQlEOgIh+AVNjQB5TnNW5zIy/YDXvOzkOEfg2o5H2jV3zpnSy7qaCIU/RD5QAsga0xxzKQSqSoiE2tXFcOfE52C+VA3qMNeBUnsc7p3PBUtFEliOhqFCwXwkRLEcCeU5uYxxzqLOsVjV1d0BJoeWTRwEtnU4jw1ZF7UuBU70DxewGjgGKIDFKmlX9fKzCQz6fofy8w5sJFFABSvmI0GK+XAQAgvQo6yODVItmMW8xvPZo9rb7sIjbZs7h/zlTxCKGjcvTgWjbbaF5qKtZsItNRUsgnt1dQKNj0smBT4+WQ8lZXdgJeqzU3fh9GWLmBXDUoc7ko1AQQgayJzDyhx1mGpc2CAqgNWv7vK33YU2UZ3SgjYlK8GbUiBk0zOw87kIAcjPqc1ZpLOKMZ3H66uWCxo+dlTUw9h1NyE88zp0mVPLPHyOEMbJBTfwmrviaj7uXSyWYGA5HIgxOsb3CFzEOM/nDvljUxQHwOTn22UIfIPBOyumImhjskLw1Mjw7AQOK6B/6ErQ6FLdjFBTsFAg0Irfg/S1HDxMAIdRLMTq5KIpupY+IwfuBIPiMuJxMgpYdBQ5i7FmPuzH6nuWOZcxeDo+gRuSlEBsIHhjCgShyIvSI5UfuvopuNIMmOLzIq9KiVPksSGQgfl1NsChb1ql1jTzJPqM2gQ+5JYTCQjpp5gPEaA/xv4IbI0th8j9UL5qzaHFww6Gx0Mdk4M2JIO9IlcnwddRRuV8BIFTE/5Afj7CV7nx8VZ+YxwvrbmBoCaNOGyITc1kzXFO5mPws3IotccENAIyEawf5j6UYwOYk1MTLPeF4f1apRmefsEvP/DdJOBKZk4NBLw7UFk4qacKXRnhB5Vd/aDqmThxS4DteOYJRF+8CX1Z57afqBc/DZ/rY11VOC4f1bERdG9shmJvprzJTxYY3GZ0KwtYnwTG9QMVbRPG9YkK1Y/2DQIGL3Rt8QJxO4ABebUQPNtkFQLZ5A1Jc91ozS7cu1AkoBHwoJdCspAwFzXNnDdsWdBxq8EnN7YyYP1A0JNxXaIyJCtWqQz3Uc6hKrv4wu0vjrGbncLXYhACkAhExo2rRqdmUp8F5fpRBojQXIe8GLS53IMawZon5h4IT7knnN3sUmnwXzdACViHwCgjUyKLqU4x1bYnB7MGzmED8uHd981dCEQgpjeEC0Du2pq2jk7Xo+Q12+QxulOFgJ4M1HLQQ+Nc5nJ3BZthbjnoDlc+cTEZjGsTwX8twqI3pNjCBDgX5q2cDfVS+J0AivfdhgCEkJKwNjWdWMJr68v3/kv8VHwOyt0JEOXGIKXM5a6KpdyNzbMaxegGv7X9FX+EtNUA8F+DwthvTX/FF1UwqiucDfVWG6CbSgitjI3k9nOhs6oh5dVdkD+/ANbMmwmF08dD4SupyppZg5XShcnw1cbucGsfHp1yV66DbtQImA+4YHPoGBt8iuJNvmv6KX4EjKKY3G91f5ZT3Xd1P6VLcQJ8GemLv6RVsQa2nrgDxlk14D/rGnOCY66N7VxeG/76eRg1dQ1kT07HN8moRlXwchrsXRoHtbvxWTjgjLvgguCoA87YlAsY3LN7VRIkyQdBVXB0KaqTZmREwr+OH2UNVOODR0BcHE5ftnP9XiuHBZPH68I2pqWvpMJ374cxcPOBTgrpzF87VBo6Tggp9V3VH1eZw/qu6mcT+6xKUEisjtcd37ySNUAjbVUt+CGUH0Jyb0Qzr8DQae9Brg7c/WukcnBFNNzd3wnM+52UPYWOZYb2g33zORyHZc2InORdEo8NkCcopMH5yQIfoPSLevCdeQ18EZAJY4JlNTsNnL5LB8iq3EkjbWJtbq+T6yNwF5wgb2KrAkOrbh3SCJKBliQAiTVTIsVrXDw/eulL0QJAakkd+CCgFMH6zLyqglMt9tUjkDN5jC6MBF388hhYnDEa8lAUa+fslZ8xAs5+GAhJPZolG5r8sakDg1uZAF4r41gT3izGptC1ohpdE/teKtTV32QNVNXcgz7ZJvBGaAL3fp27Nb4Gk6bk6YJIQPJ5o56H+WOGoF6AuSMHQc7ENJwb3WATHy1IVJwdm/A/8p2mhpd5r4wXoPHgtSIO4TFfIWu8znJRyzpUzBqgQU0ML6llwPYKnnG+0XOfMyGNQe7fvhmqzpyG6nNn4NieT2DJ1LGwaNxwdo1+EyOVx1s0f4o14BDbKcMLwaQ83+mrWPM4mzqbe4fXlh7fIFrg46Pjd6D3ohrwRHAvFHnKtB06N2cAzBekD4XTJ7+A2pqr8Lf1K2BrSRFr4ufqi+xI5UwcYfc5q7oZvceyBh5u1tTBPT/G5IFwJAYoIMk9hWiOXFujnai7w4+THN9WW2D31/VQuPsWLH5rvu7NSYvGDYMVb05jn1k3fzbMfiEJskYPZs/B3fp62LZqmZrbf5Y0Jjn+U9YAjTaJrpkSyrMYYYv7KJ7FfTFGYc1d5O7L0UXuIeajN76obDn1dwZiP5a+OlH35qRsPD50VMx36+HzvZ/CgpdehKxRg5m/M3sqfnZCozswL33YdYHPd8E1t1eNBPNYjiJncR+bnKDVnOZE3mvDUMgqL4Yj1SfhYt2PrIGCKQ192+IRwpVdkP4ibCnOh9s3b8L1a1egYv8+2JSXBfNGPs8apGsbepAXjU+7I/D5aD3ANRNXmMG4LY9VVHDmUjx3W0bzbEfUmOruy7ioRp6dMVLRu7mEIp+Hbx1a7V3vr4dzX/8DLBYLa4Qe4txJeH0DDdjsgBxOMyIqJISUhHdfFiuknbfPtbVYmIO/AujdnETHY+n0CbBi9jTIHp/KXqFvpz0LG3PeZrtXuqIQn4EhDT4Drw378ymBbR1N2zRzdsmJMrkVxYIUgWjdtai3wj1GoZhgybli2JzUhNcH6+4AQdEDum1VEZjNd9mX19wRgxgwNXH71k34rPQDrD2nfrHZa0Rin60C23Y81qV9msvSGIXEQXoLYbwUnYS5K7r1Gj5HuVpHf+btFN2bk2gH6FV5+fw5+LnqAux8t4S9Rs/+80u4hX84Fc+aguecfxfoSX2N6o02/VznEIieXAp7qZBqvTDmF9eRQvPidW8unwE6OrQb+7d9CBdOfwtVZ7+Hk+Vl7PW6cOxQNtfQQ9zm8ZaN/3O7Qz/nTAaGckZoF+EkgmPxEowLqakYJnVe5OQZr+E51gGwPsgj2FuHjpT8VYKtfCPwDR4f+9Hcv11Kp4U9TAiqQrosiYHOS6IRPlqhWNZc8Bqqkyinz1AclNNHyRbfvPaSgL/8Za5heHp9tmrZoqNA/PXRtHUz545vRlQywAIELxCOOYPEuHNBFIrPqVLno5Q38mJ0YaTsYRuCJ4X5eNzffzfZj1YJnTMlWCeEci6IZqCd8inmLuPO+XyOFLmsK5z/tDUcWNZFF+i3KD4iWP8/OO530G60HeK1lkAJUiunvJ6sAaf8nmwOY1Yv+QD/DNz7qGLe2wxObXTHPw8bfrM0pKz0YbW+Lk6JAuM/H9RIy/D2aU9NC60gcAa8OEoVr0VB96KuBG/VnkehZruDsiVL/+2kp1ED++5waNnCSdz6wQ9qhh52hxTX/CfGGcuefqNLJTXRMbeH8v6HHeDKtqam05uaVm5+q2lp7rgm+cPiH0p1aPGQg2uH9lFxEcGZo5PidtK36vyxw2+QZgx79juq0XGha8RtdIbB8G+E3m/DEp5u5AAAAABJRU5ErkJggg==" InformativeScreenshot="6f8cb6c913a9c84a3809dab02243204b.jpg" Selector="&lt;html app='chrome.exe' title='Log in - VMware ESXi' /&gt;" Title="Log in - VMware ESXi" Url="https://172.30.44.85/ui/#/login" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
